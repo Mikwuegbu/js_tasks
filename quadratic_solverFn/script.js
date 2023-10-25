@@ -1,6 +1,6 @@
 
 
-const quadraticForm = (a, b, c) => {
+const rootCalc = (a, b, c) => {
 
     let x = [];
     const discriminant = b * b - 4 * a * c;
@@ -32,4 +32,4 @@ const quadraticForm = (a, b, c) => {
 }
 
 
-console.log(quadraticForm(0, -3, 2));
+console.log(rootCalc(0, -3, 2));
