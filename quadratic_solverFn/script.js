@@ -2,7 +2,7 @@
 
 const quadraticForm = (a, b, c) => {
 
-    const x = [];
+    let x = [];
     const discriminant = b * b - 4 * a * c;
 
     //Quadratic eqn is invalid when A = 0
@@ -18,7 +18,7 @@ const quadraticForm = (a, b, c) => {
 
         // One real root exits
 
-        x = x.push(-b / (2 * a));
+        x.push(-b / (2 * a));
         return console.log(`One real root: ${x}`);
     } else {
 
@@ -26,13 +26,10 @@ const quadraticForm = (a, b, c) => {
 
         const x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
         const x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
-        x.push(x1, x2);
-        return {
-            x,
-            conditions: "Two real roots",
-        };
+        x = x.push(x1, x2);
+        return console.log(x);
     }
 }
 
 
-quadraticForm(0, 1, 0);
+console.log(quadraticForm(0, -3, 2));
