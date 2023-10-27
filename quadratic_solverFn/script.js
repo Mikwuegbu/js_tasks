@@ -3,7 +3,7 @@
 const rootCalc = (a, b, c) => {
 
     let x = [];
-    const discriminant = b * b - 4 * a * c;
+    const discriminant = Math.pow(b, 2) - (4 * a * c);
 
     //Quadratic eqn is invalid when A = 0
 
