@@ -9,17 +9,17 @@ const rootCalc = (a, b, c) => {
 
 
     if (a == 0) {
-        console.log("Invalid Equation")
+        return "Invalid Equation";
     } else if (discriminant < 0) {
 
-        console.log("No real roots");
+        return "No real roots";
 
     } else if (discriminant === 0) {
 
         // One real root exits
 
         x.push(-b / (2 * a));
-        return console.log(`One real root: ${x}`);
+        return `One real root: ${x}`;
     } else {
 
         //if two real roots exits
@@ -27,7 +27,7 @@ const rootCalc = (a, b, c) => {
         const x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
         const x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
         x = x.push(x1, x2);
-        return console.log(x);
+        return x;
     }
 }
 
